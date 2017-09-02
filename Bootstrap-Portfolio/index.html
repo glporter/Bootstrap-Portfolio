@@ -1,0 +1,55 @@
+<!-- CSS Stylesheets with Relative Paths -->
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Stylesheets with Relative Paths</title>
+
+    <!-- This line is money! It points your HTML to the CSS file. -->
+    <!-- Notice the "relative" pathway? It matches a file inside our current directory's "assets" folder. Open it to see our style rules. -->
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+
+</head>
+
+<body>
+    <header id="masthead">
+        <div class="container">
+            <a href="index.html" id="logo">Gerald Porter</a>
+            <nav>
+                <a href="index.html">About</a>
+                <a href="portfolio.html">Porfolio</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="main-container" class="container">
+        <!-- <div class="about-me"> -->
+        <h1>About Me</h1>
+        <img src="assets/images/chatbot.jpg" class="auth-image" alt="Dog picture">
+        <p>I am a Computer Science major at University of North Carolina, Charlotte, in my senior year. I am employed with Wells Fargo as a e-business Consultant/Technical Team Lead. I am originally from Florida. I moved to Charlotte in 1982 to work for
+            IBM. I am an associate Minister and youth worker at Ebenezer Baptist Church in Charlotte. I am a Distinguished Toastmaster (DTM) with the Wells Fargo CIC Toastmasters Club #7358. I love volunteering and facilitate a Youth Leadership Program
+            every spring and a 'One Hour of Code' event in the fall during Computer Science Education Week.</p>
+    </div>
+
+    <div id="sidebar" class="container">
+        <h2>Connect with Me</h2>
+        <img src="assets/images/github-128.png" class="social" alt="Github ">
+        <img src="assets/images/Linkedin-128.png" class="social" alt="LinkedIn ">
+        <img src="assets/images/stackoverflow-128.png" class="social" alt="Stack Overflow ">
+    </div>
+
+
+    <footer>
+        <div class="container">
+            &copy; Copyright 2016 Gerald Porter
+        </div>
+    </footer>
+</body>
+
+</html>

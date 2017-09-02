@@ -1,0 +1,67 @@
+<!-- CSS Stylesheets with Relative Paths -->
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Stylesheets with Relative Paths</title>
+
+    <!-- This line is money! It points your HTML to the CSS file. -->
+    <!-- Notice the "relative" pathway? It matches a file inside our current directory's "assets" folder. Open it to see our style rules. -->
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+
+</head>
+
+<body>
+    <header id="masthead">
+        <div class="container">
+            <a href="index.html" id="logo">Gerald Porter</a>
+            <nav>
+                <a href="index.html">About</a>
+                <a href="portfolio.html">Porfolio</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="main-container" class="container">
+        <h1>Contact</h1>
+        <form id="contact-form ">
+            <ul>
+                <li>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="John Smith" required="required ">
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="text " name="email " id="email " placeholder="example@gmail.com " required="required ">
+                </li>
+                <li>
+                    <label for="messag ">Message</label>
+                    <textarea id="message" name="message" required="required"></textarea>
+                </li>
+            </ul>
+            <input type="submit" name="submi ">
+        </form>
+    </div>
+
+    <div id="sidebar" class="container">
+        <h2>Connect with Me</h2>
+        <img src="assets/images/github-128.png" class="social" alt="Github ">
+        <img src="assets/images/Linkedin-128.png" class="social" alt="LinkedIn ">
+        <img src="assets/images/stackoverflow-128.png" class="social" alt="Stack Overflow ">
+    </div>
+
+
+    <footer>
+        <div class="container">
+            &copy; Copyright 2016 Gerald Porter
+        </div>
+    </footer>
+</body>
+
+</html>
