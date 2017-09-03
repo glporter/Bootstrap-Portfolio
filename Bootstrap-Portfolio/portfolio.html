@@ -5,15 +5,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
+    <meta name="viewport" content="width=device-width">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie-edge"> -->
     <title>CSS Stylesheets with Relative Paths</title>
 
     <!-- This line is money! It points your HTML to the CSS file. -->
     <!-- Notice the "relative" pathway? It matches a file inside our current directory's "assets" folder. Open it to see our style rules. -->
-    <link rel="stylesheet" type="text/css" href="assets/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <!-- Boostrap Stylesheet -->
 
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -31,62 +34,32 @@
 
     <div id="main-container" class="container">
         <section class="main-section ">
-            <!-- 
-            <div class="work">
-                <img src="assets/images/technics-q-c-640-480-1.jpg " class="auth-image " alt="Hangman ">
-                <h3>Hangman</h3>
+            <!-- Start of content wrapper -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <img class="port-imgs" src="assets/images/technics-q-c-640-480-1.jpg " class="auth-image " alt="Hangman " width="200px" height="200px">
+                        <h3>Hangman</h3>
+                    </div>
+                    <div class="col-6">
+                        <img class="port-imgs" src="assets/images/technics-q-c-640-480-2.jpg " class="auth-image " alt="RPG Game " width="200px" height="200px">
+                        <h3>RPG Game</h3>
+                    </div>
+                    <div class="col-6">
+                        <img class="port-imgs" src="assets/images/technics-q-c-640-480-5.jpg " class="auth-image " alt="Trivia Game " width="200px" height="200px">
+                        <h3>Trivia Game</h3>
+                    </div>
+                    <div class="col-6">
+                        <img class="port-imgs" src="assets/images/technics-q-c-640-480-7.jpg " class="auth-image " alt="Rutgers Info Widget " width="200px" height="200px">
+                        <h3>Rutgers Info Widget</h3>
+                    </div>
+                    <div class="col-6">
+                        <img class="port-imgs" src="assets/images/technics-q-c-640-480-9.jpg " class="auth-image " alt="Rock Paper Scissors " width="200px" height="200px">
+                        <h3>Rock Paper Scissors</h3>
+                    </div>
+                </div>
             </div>
-
-            <div class="work">
-                <img src="assets/images/technics-q-c-640-480-2.jpg " class="auth-image " alt="RPG Game ">
-                <h3>RPG Game</h3>
-            </div>
-
-            <div class="work">
-                <img src="assets/images/technics-q-c-640-480-5.jpg " class="auth-image " alt="Trivia Game ">
-                <h3>Trivia Game</h3>
-            </div>
-
-            <div class="work">
-                <img src="assets/images/technics-q-c-640-480-7.jpg " class="auth-image " alt="Rutgers Info Widget ">
-                <h3>Rutgers Info Widget</h3>
-            </div>
-
-            <div class="work">
-                <img src="assets/images/technics-q-c-640-480-9.jpg " class="auth-image " alt="Rock Paper Scissors ">
-                <h3>Rock Paper Scissors</h3>
-            </div>
-
-        -->
-
-            <tr>
-                <td>
-                    <img src="assets/images/technics-q-c-640-480-1.jpg" class="auth-image " alt="Hangman ">
-                    <h3>Hangman</h3>
-                </td>
-                <td>
-                    <img src="assets/images/technics-q-c-640-480-2.jpg " class="auth-image " alt="RPG Game ">
-                    <h3>RPG Game</h3>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <img src="assets/images/technics-q-c-640-480-5.jpg " class="auth-image " alt="Trivia Game ">
-                    <h3>Trivia Game</h3>
-                </td>
-                <td>
-                    <img src="assets/images/technics-q-c-640-480-7.jpg " class="auth-image " alt="Rutgers Info Widget ">
-                    <h3>Rutgers Info Widget</h3>
-                </td>
-            </tr>
-
-            <tr>
-                <td><img src="assets/images/technics-q-c-640-480-9.jpg " class="auth-image " alt="Rock Paper Scissors ">
-                    <h3>Rock Paper Scissors</h3>
-                </td>
-                <td></td>
-            </tr>
+        </section>
     </div>
 
     <div id="sidebar" class="container">
@@ -102,6 +75,16 @@
             &copy; Copyright 2016 Gerald Porter
         </div>
     </footer>
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
