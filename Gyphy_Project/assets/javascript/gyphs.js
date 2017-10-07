@@ -82,6 +82,7 @@
 
                      var topicImage = $("<img>");
                      topicImage.attr("src", results[i].images.fixed_height.url);
+                     setImageHandler(topicImage);
 
                      gifDiv.prepend(p);
                      gifDiv.prepend(topicImage);
@@ -91,6 +92,22 @@
              }); //end function done
 
          //Set state of image
+         // Ran out of time but pseudocode would be to load the still image into a variable
+         //   Load the animated image into another variable and switch the images.
+         //   If the image being displayed is the 'still' image, swap to the animated image.
+         //   If the image being displayed is the 'animated image, then swap/show the still image.
+
+         function setImageHandler(topicImage) {
+
+             $(topicImage).on("click", function() {
+                 if (topicImage.attr("data-state") === "still") {
+                     // topicImage.attr("src") = topicImage.fixed_height;
+                 }
+
+
+                 // alert("An image was clicked");
+             })
+         }
 
 
      }); //end function button on-click
