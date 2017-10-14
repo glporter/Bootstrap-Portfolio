@@ -22,6 +22,7 @@
     <div class="container">
         <div class="jumbotron">
             <h1 class="text-center">Anytime is Train Time</h1>
+            <h3 class="text-center">Chee Chee. Choo Choo</h3>
         </div>
 
         <div class="container">
@@ -49,13 +50,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <!--          <tr>
                                     <td>Trenton Express</td>
                                     <td>Trenton</td>
                                     <td>25</td>
                                     <td>05:35</td>
-                                    <td>10</td>
-                                </tr>
+                                    <td>10</td>  
+                                </tr>  -->
                             </tbody>
                         </table>
                     </div>
@@ -83,7 +84,7 @@
                         </div>
                         <div class="form-group">
                             <label for="start-input">First Train Time (HH:MM - miliary Time)</label>
-                            <input class="form-control" id="first-time-input" type="text">
+                            <input class="form-control" id="start-time-input" type="text">
                         </div>
                         <div class="form-group">
                             <label for="frequency-input">Frequency (min)</label>
@@ -104,28 +105,18 @@
         // START CODING BELOW!!
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyD2ktnDjKYioKddYj8g5T7xXSsxQHNGoCQ",
-            authDomain: "geralds-first-project.firebaseapp.com",
-            databaseURL: "https://geralds-first-project.firebaseio.com",
-            projectId: "geralds-first-project",
-            storageBucket: "geralds-first-project.appspot.com",
-            messagingSenderId: "817156048996"
+            apiKey: "AIzaSyDvAcROieS9HlHCm0J0V-HKpJAS4Gndpvc",
+            authDomain: "train-project-b1314.firebaseapp.com",
+            databaseURL: "https://train-project-b1314.firebaseio.com",
+            projectId: "train-project-b1314",
+            storageBucket: "train-project-b1314.appspot.com",
+            messagingSenderId: "110537890157"
         };
 
         firebase.initializeApp(config);
 
         // Create a variable to reference the database
         var database = firebase.database();
-
-
-
-
-
-
-
-
-
-
 
         var train = "";
         var destination = "";
@@ -146,45 +137,46 @@
 
             train = $("#train-name-input").val();
             destination = $("#dest-input").val();
-            // tempStartTime = $("#start-time-input");
-            //alert("Temp Start Time: " + tempStartTime)
-            //starttime = convertStarttime(tempStartTime);
+            tempStartTime = $("#start-time-input").val();
             frequency = $("#frequency-input").val();
-
-            //alert("Train:       " + train);
-            //alert("Destination: " + destination);
-            //alert("Start time:  " + starttime);
-
-            //alert("Frequency:   " + frequency);
-
-
-
 
             console.log("Train:       " + train);
             console.log("Destination: " + destination);
-            console.log("Start time:  " + starttime);
+            console.log("Start time:  " + tempStartTime);
             console.log("Frequency:   " + frequency);
 
 
-            database.ref().set({
-                train: name,
-                email: email,
-                age: age,
-                comment: comment
+            database.ref().push({
+                train: train,
+                destination: destination,
+                starttime: tempStartTime,
+                frequency: frequency
             });
 
             addTrainInfo();
 
         });
 
-        function convertStarttime(tempStartTime) {
-            var colonIndex = tempStartTime.indexOf(":");
-            var hours = tempStartTime.substr(0, colonIndex - 1);
-            var minutes = tempStarTime(substr(colonIndex + 1, tempStartTime.length));
-            var convertedStartTime = hours + ":" + minutes;
-            console.log("Converted Start time: " + convertedStartTime);
-            return convertedStartTime;
 
+        function calculateNextArrival() {
+            // ****** Ran out of time - Had some technical issues with my computer last night (Friday)
+            // pseudo-code: Compute the next arrival time by adding the frequency to the start time
+            //   need to parse the hour from the start time and the minutes, enter these values in the moment function below
+            var nextArrival = moment({
+                hour: 5,
+                minute: 10
+            }) + moment({
+                hour: 0,
+                minute: frequency
+            });
+
+        }
+
+        function calculateMinutesAway() {
+            // ****** Ran out of time - Had some technical issues with my computer last night (Friday)
+            // pseudo-code: Is the difference between the Computed Next Arrival time and the Current time in minutes
+            //
+            // 
         }
 
 
