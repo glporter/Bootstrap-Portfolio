@@ -1,0 +1,40 @@
+                                    /**
+ First External CSS Stylesheet
+ **/
+                                    /*
+Each of these CSS elements is associated with an HTML Element, Class, or ID.
+Flip between this CSS file and the HTML to see how things line up.
+Experiment with deleting lines of code from the CSS to see how it affects the webpage when you refresh in the browser.
+*/
+                                    
+                                    h1 {
+                                        font-family: Helvetica;
+                                        font-size: 64px;
+                                        color: white;
+                                    }
+                                    
+                                    h3 {
+                                        font-family: Helvetica;
+                                        font-size: 25px;
+                                        color: white;
+                                    }
+                                    
+                                    .jumbotron {
+                                        background-color: #996633;
+                                        width: 1000px;
+                                        height: 200px;
+                                    }
+                                    
+                                    .panel-title {
+                                        background-color: #4d94ff;
+                                        color: white;
+                                        font-size: 15;
+                                        border-width: 10px;
+                                        border-color: #4d94ff;
+                                        width: 1000px;
+                                    }
+                                    
+                                    .train-table {
+                                        width: 1000px;
+                                        border-width: 10px;
+                                    }

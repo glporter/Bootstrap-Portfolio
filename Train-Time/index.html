@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Link to Moment.js should go here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+    <!-- Jumbotron -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Anytime is Train Time</h1>
+            <h3 class="text-center">Chee Chee. Choo Choo</h3>
+        </div>
+
+        <div class="container">
+
+            <br>
+
+
+
+            <!-- Current Train Schedule -->
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Current Train Schedule</h3>
+                    </div>
+                    <!-- <div class="panel-body" id="recent-schedule-added"> -->
+                    <div class="panel-body">
+                        <table class="table table-bordered" id="train-table" cellspacing="150">
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--     <tr>
+                                    <td>Trenton Express</td>
+                                    <td>Trenton</td>
+                                    <td>25</td>
+                                    <td>05:35</td>
+                                    <td>10</td>  
+                                </tr>  -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Add Train</h3>
+                </div>
+                <div class="panel-body">
+
+                    <!-- Sign-up Form (note the various input "types")-->
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="train-input">Train Name</label>
+                            <input class="form-control" id="train-name-input" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination-input">Destination</label>
+                            <input class="form-control" id="dest-input" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="start-input">First Train Time (HH:MM - miliary Time)</label>
+                            <input class="form-control" id="first-time-input" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="frequency-input">Frequency (min)</label>
+                            <input class="form-control" id="frequency-input" type="text">
+                        </div>
+                        <button class="btn btn-default" id="add-train" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+    </div>
+    <script>
+        // START CODING BELOW!!
+
+
+        var train = "";
+        var destination = "";
+        var starttime = "";
+        var frequency = "";
+        var tempStartTime = "";
+        var nextArrival = "";
+        var minutesAway = "";
+
+
+        // Capture Button Click
+        $("#add-train").on("click", function() {
+            // Don't refresh the page!
+            event.preventDefault();
+
+            // Initial Values
+
+
+            train = $("#train-name-input").val();
+            destination = $("#dest-input").val();
+            // tempStartTime = $("#start-time-input");
+            //alert("Temp Start Time: " + tempStartTime)
+            //starttime = convertStarttime(tempStartTime);
+            frequency = $("#frequency-input").val();
+
+            //alert("Train:       " + train);
+            //alert("Destination: " + destination);
+            //alert("Start time:  " + starttime);
+
+            //alert("Frequency:   " + frequency);
+
+
+
+
+            console.log("Train:       " + train);
+            console.log("Destination: " + destination);
+            console.log("Start time:  " + starttime);
+            console.log("Frequency:   " + frequency);
+
+            addTrainInfo();
+
+        });
+
+        function convertStarttime(tempStartTime) {
+            var colonIndex = tempStartTime.indexOf(":");
+            var hours = tempStartTime.substr(0, colonIndex - 1);
+            var minutes = tempStarTime(substr(colonIndex + 1, tempStartTime.length));
+            var convertedStartTime = hours + ":" + minutes;
+            console.log("Converted Start time: " + convertedStartTime);
+            return convertedStartTime;
+
+        }
+
+
+        function addTrainInfo() {
+            nextArrival = "10:55";
+            minutesAway = "20"
+            var trainRow = $("<tr><td>" + train + "</td>" + "<td>" + destination + "</td>" + "<td>" + frequency + "</td>" + "<td>" + nextArrival + "</td>" + "<td>" + minutesAway + "</td></tr>");
+            $("#train-table").append(trainRow);
+        }
+    </script>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+
+</html>
